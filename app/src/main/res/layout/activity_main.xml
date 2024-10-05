@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/taskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To Do List"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        style="@style/TextAppearance.MaterialComponents.Headline4"/>
+
+    <!-- Input Field````new task name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task Name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input Field for Task Description -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task Description"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Save Task Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save Task"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorOnPrimary"/>
+
+    <!-- Display Tasks -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/task_item"/>
+
+</LinearLayout>

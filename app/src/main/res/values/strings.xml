@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Modudule3App</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="mark_task_completed">Mark as Completed</string>
+</resources>
